@@ -1,0 +1,16 @@
+.modal-btn {
+  font-family: inherit;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--maincolorwhite);
+  background: var(--maincoloreff);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 250ms var(--trainsition-timing-function);
+}

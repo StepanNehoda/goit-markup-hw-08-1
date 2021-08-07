@@ -1,0 +1,62 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 250ms var(--trainsition-timing-function),
+    visibility 250ms var(--trainsition-timing-function);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 609px;
+  background-color: var(--maincolorwhite);
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+
+@media screen and (mix-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close-btn-icon {
+  width: 11px;
+  fill: var(--maincolorblack);
+}
+
+.close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover .close-btn-icon,
+  &:focus .close-btn-icon {
+    fill: var(--maincoloreff);
+  }
+}

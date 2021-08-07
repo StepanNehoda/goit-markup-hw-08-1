@@ -1,0 +1,30 @@
+.socialfooter-list {
+  display: flex;
+}
+.socialfooter-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socialfooter-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--maincolorwhite);
+  cursor: pointer;
+}
+
+.socialfooter-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--socialfootercolor);
+  transition: background-color 250ms var(--trainsition-timing-function),
+    fill 250ms var(--trainsition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--maincoloreff);
+  }
+}
