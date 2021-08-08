@@ -143,6 +143,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .footer-form-input {
+    display: block;
     width: 450px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -380,6 +381,7 @@ body {
 
 .socialfooter-list {
   display: flex;
+  justify-content: center;
 }
 
 .socialfooter-list-item:not(:last-child) {
@@ -414,7 +416,7 @@ body {
   align-items: center;
   background-color: var(--maincolorbtteam);
   border-radius: 4px;
-  max-width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
 }
@@ -449,12 +451,9 @@ body {
   .advantages__items {
     margin-top: 30px;
     margin-left: 30px;
-    width: 354px;
+    width: 100%;
     height: 251px;
-  }
-  .advantages__tool {
-    width: 354px;
-    height: 120px;
+    flex-basis: 354px;
   }
   .advantages__title {
     text-align: unset;
@@ -464,14 +463,6 @@ body {
 @media screen and (min-width: 1200px) {
   .advantages__list {
     flex-wrap: nowrap;
-  }
-  .advantages__items {
-    width: 270px;
-    height: 251px;
-  }
-  .advantages__tool {
-    width: 270px;
-    height: 120px;
   }
 }
 
@@ -629,9 +620,6 @@ body {
 }
 
 .footer-main-right {
-  max-width: 206px;
-  height: 80px;
-  margin: 0 auto;
   margin-bottom: 60px;
 }
 
@@ -713,7 +701,7 @@ body {
 }
 
 @media screen and (min-width: 480px) and (max-width: 1199px) {
-  .address-list {
+  .footer-main-left {
     margin-bottom: 60px;
   }
 }
@@ -789,6 +777,9 @@ body {
 }
 
 .mobile-menu__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: relative;
   padding-top: 48px;
   padding-left: 40px;
@@ -812,10 +803,6 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-}
-
-.nav-list {
-  margin-bottom: 302px;
 }
 
 .nav-list__item:not(last-chield) {
@@ -1045,6 +1032,7 @@ body {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/bg-main.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 480px), screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
@@ -1053,19 +1041,19 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/bg-main.jpg");
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 481px), screen and (min-resolution: 192dpi) and (min-width: 481px), screen and (min-resolution: 2dppx) and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/bg-main@2x.jpg");
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -1073,7 +1061,7 @@ body {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 769px), screen and (min-resolution: 192dpi) and (min-width: 769px), screen and (min-resolution: 2dppx) and (min-width: 769px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/deckstop/bg-main@2x.jpg");
   }
@@ -1089,7 +1077,7 @@ body {
 @media screen and (min-width: 768px) {
   .filter__list {
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
   .projects {
     display: flex;
@@ -1116,11 +1104,20 @@ body {
   .projects__item:nth-child(-n + 2) {
     height: unset;
   }
+  .filter__list {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item:not(:last-of-type) {
   margin-right: 8px;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__item:not(:last-of-type) {
+    margin-bottom: 0px;
+  }
 }
 
 .filter__btn {

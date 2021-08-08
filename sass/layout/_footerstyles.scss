@@ -22,9 +22,6 @@
 }
 
 .footer-main-right {
-  max-width: 206px;
-  height: 80px;
-  margin: 0 auto;
   margin-bottom: 60px;
 }
 
@@ -108,7 +105,7 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 1199px) {
-  .address-list {
+  .footer-main-left {
     margin-bottom: 60px;
   }
 }
